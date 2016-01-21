@@ -22,7 +22,7 @@
             </div>
             <div class="alone"></div>
             <div id="content">
-				{content}
+				          {content}
             </div>
             <div id="footer" class="span12">
                 Copyright &copy; 2014,  <a href="mailto:someone@somewhere.com">Me</a>.

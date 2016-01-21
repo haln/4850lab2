@@ -12,16 +12,17 @@ class Application extends CI_Controller {
     protected $choices = array(// our menu navbar
 	'Home' => '/', 'Gallery' => '/gallery', 'About' => '/about'
     );
-	
+
     /**
      * Constructor.
      * Establish view parameters & load common helpers
      */
     function __construct()
     {
-	parent::__construct();
-	$this->data = array();
-	$this->data['pagetitle'] = 'Demo Contact Manager';
+    	parent::__construct();
+    	$this->data = array();
+    	$this->data['pagetitle'] = 'Demo Contact Manager';
+      $this->load->library('parser');
     }
 
     /**
