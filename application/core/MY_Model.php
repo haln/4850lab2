@@ -13,7 +13,7 @@
  * Each such model is bound to a specific database table, using a designated
  * key field as the associative array index internally.
  */
-class Images extends CI_Model {
+class MY_Model extends CI_Model {
 
     var $_tableName;	    // Which table is this a model for a row of?
     var $_keyField;		 // name of the primary key field

@@ -21,7 +21,7 @@ class Welcome extends Application {
 	public function index()
 	{
 		//get the newest images from our model
-		$pix = $this->images->newest();
+		$pix = $this->MY_Model->newest();
 
 		//build an array of formatted cells for them
 		foreach ($pix as $picture){ $cells[] = $this->parser->parse('_cell', (array) $picture, true);}

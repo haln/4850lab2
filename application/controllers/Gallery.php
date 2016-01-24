@@ -20,7 +20,7 @@ class Gallery extends Application {
 	 */
 	public function index()
 	{
-		$pix = $this->images->all();
+		$pix = $this->MY_Model->all();
 
 		foreach($pix as $picture){
 			$cells[] = $this->parser->parse('_cell', (array) $picture, true);
