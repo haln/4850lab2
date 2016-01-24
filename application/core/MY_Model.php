@@ -25,11 +25,11 @@ class Images extends CI_Model {
 	parent::__construct();
 	$this->_tableName = get_class($this);
     }
-	
+
 	function all()
 	{
 		$this->order_by("id", "dest");
-		$query = $this->db->('images');
+		$query = $this->db->get('images');
 		return $query->result_array();
 	}
 
