@@ -24,7 +24,9 @@ class Welcome extends Application {
 		$pix = $this->MY_Model->newest();
 
 		//build an array of formatted cells for them
-		foreach ($pix as $picture){ $cells[] = $this->parser->parse('_cell', (array) $picture, true);}
+		foreach ($pix as $picture){
+			$cells[] = $this->parser->parse('_cell', (array) $picture, true);
+		}
 
 		//prime the table class
 		$this->load->library('table');
@@ -36,7 +38,7 @@ class Welcome extends Application {
 		$this->table->set_template($parms);
 
 		//finally generate the table
-		$rows = $this->table->make_columns($cell, 3);
+		$rows = $this->table->make_columns($cells, 3);
 		$this->data['thetable'] = $this->table->generate($rows);
 
 		//$this->load->view('welcome');
