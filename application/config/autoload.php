@@ -126,4 +126,12 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array();
+
+class Images extends CI_Model {
+	//constructor (is a good practice)
+	function __construct()
+	{
+		parent::__construct();
+	}
+}
+$autoload['model'] = array('images');
