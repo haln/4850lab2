@@ -28,7 +28,7 @@ class MY_Model extends CI_Model {
 
 	function all()
 	{
-		$this->order_by("id", "dest");
+		$this->db->order_by("id", "dest");
 		$query = $this->db->get('images');
 		return $query->result_array();
 	}
